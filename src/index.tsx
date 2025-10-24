@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/fontello/fontello-49ec18df/css/fontello.css'
 import App from './App';
 
 const root = ReactDOM.createRoot(
