@@ -1,0 +1,10 @@
+header {
+    height: 80px;
+    width: 100%;
+    background-color: var(--form-bg-color);
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    font-size: 25px;
+    font-weight: bold;
+}

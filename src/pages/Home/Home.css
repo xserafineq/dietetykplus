@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Roboto;
+}
+.time {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    color: var(--form-bg-color) !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+}
