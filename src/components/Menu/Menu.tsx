@@ -12,7 +12,7 @@ const Diet = MdFastfood as React.ComponentType<any>;
 const Visit = FaNotesMedical as React.ComponentType<any>;
 
 export default function Menu() {
-    const [data, setData] = useState<string>('');
+    const [data, setData] = useState<string>(new Date().toLocaleDateString("pl-PL") + " " + new Date().toLocaleTimeString("pl-PL"));
 
     const navigate = useNavigate();
 
@@ -23,6 +23,15 @@ export default function Menu() {
     const goToClients = () => {
         navigate('clients');
     }
+
+    const goToCalendar = () => {
+        navigate('calendar');
+    }
+
+    const goToDiets = () => {
+        navigate('diets');
+    }
+
 
     useEffect(() => {
         const timeInterval = setInterval(() => setData(new Date().toLocaleDateString("pl-PL") + " " + new Date().toLocaleTimeString("pl-PL"))
@@ -41,11 +50,11 @@ export default function Menu() {
                       <Persons className={"option-icon"}/>
                       <div className={"option-name"}>Klienci</div>
                   </div>
-                  <div className="activity-button">
+                  <div onClick={goToCalendar} className="activity-button">
                       <Calendar className={"option-icon"}/>
                       <div className={"option-name"}>Kalendarz</div>
                   </div>
-                  <div className="activity-button">
+                  <div onClick={goToDiets} className="activity-button">
                       <Diet className={"option-icon"}/>
                       <div className={"option-name"}>Diety</div>
                   </div>

@@ -1,0 +1,26 @@
+.calendar-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calendar {
+    fill: red;
+    font-size: 30px;
+    background-color: var(--form-bg-color);
+    border-radius: 25px;
+    padding:1%;
+}
+
+.customVars {
+--cui-calendar-nav-date-color: '#333' !important;
+--cui-calendar-cell-hover-bg: '#f8f9fa' !important;
+--calendar-nav-btn-bg: red !important;
+}
+
+

@@ -1,8 +1,9 @@
 :root {
-    --form-bg-color: #81bd92;
+    --form-bg-color: #4ccf66;
 }
 
 .signup-form {
+    margin-top: 100px !important;
     background-color: #fafafa;
     width: 480px;
     height: auto;
@@ -38,6 +39,7 @@
     width: 100%;
     font-size: 18px;
     font-weight: bold;
+    color: white;
 }
 
 .form-control {

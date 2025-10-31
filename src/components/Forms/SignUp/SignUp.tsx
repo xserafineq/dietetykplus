@@ -21,7 +21,7 @@ export default function SignUp() {
                 <FloatingLabel controlId="floatingPassword" label="Powtórz Hasło">
                     <Form.Control className={"form-control"}  type="password" placeholder="Password" />
                 </FloatingLabel>
-                <Button className="signup-button" variant={"success"} type={"submit"}>Zarejstruj się</Button>
+                <Button className="signup-button" variant={"success"} type={"submit"}>Zarejestruj się</Button>
             </form>
         </>
     );

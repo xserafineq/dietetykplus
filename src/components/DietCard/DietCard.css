@@ -1,0 +1,40 @@
+.diet-box {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px -24px var(--form-bg-color) !important;
+}
+
+.diet-icon {
+    color: red !important;
+    fill: red !important;
+    font-size: 70px;
+    padding: 10px !important;
+}
+
+.diet-icon svg {
+    color: var(--form-bg-color) !important;
+    fill: var(--form-bg-color) !important;
+}
+
+.diet-name {
+    color: var(--form-bg-color) !important;
+    fill: var(--form-bg-color) !important;
+    font-weight:bold;
+    font-size: 25px;
+}
+.diet-kcal {
+    color: #757575 !important;
+    font-size: 20px;
+    font-weight:bolder;
+}
+
+.diet-kcal svg {
+    color: darkorange !important;
+    fill: darkorange !important;
+}
