@@ -1,0 +1,16 @@
+import { FaAddressBook } from "react-icons/fa";
+import './VisitCard.css';
+
+const VisitIcon = FaAddressBook as React.ComponentType<any>;
+
+export default function VisitCard({clientData,date, now} : {clientData: string[], date: string, now: boolean}) {
+    return (
+        <>
+            <div className={now ? "visit-box visit-now" : "visit-box"}>
+                <div className={"visit-icon"}><VisitIcon/></div>
+                <div className={"visit-clientData"}>{clientData.map((x) => x + " ")}</div>
+                <div className={"visit-date"}>{date} {now ? " (teraz)" : ""}</div>
+            </div>
+        </>
+    );
+}

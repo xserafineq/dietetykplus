@@ -6,15 +6,15 @@ body {
 }
 .time {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100px;
-    color: var(--form-bg-color) !important;
+    height: 200px;
+    color: var(--primary) !important;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 30px;
-    align-items: center;
-    justify-content: center;
     font-size: 32px;
     font-weight: bold;
 }

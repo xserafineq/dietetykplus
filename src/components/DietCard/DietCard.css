@@ -7,7 +7,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    box-shadow: 0px 0px 20px -24px var(--form-bg-color) !important;
+    box-shadow: 0px 0px 20px -24px var(--primary) !important;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    transition: 0.8s ease-in-out;
+}
+
+.diet-box:hover {
+    scale: 1.1;
+    transition: 0.8s ease;
 }
 
 .diet-icon {
@@ -18,19 +26,18 @@
 }
 
 .diet-icon svg {
-    color: var(--form-bg-color) !important;
-    fill: var(--form-bg-color) !important;
+    color: var(--primary) !important;
+    fill: var(--primary) !important;
 }
 
 .diet-name {
-    color: var(--form-bg-color) !important;
-    fill: var(--form-bg-color) !important;
+    color: var(--text) !important;
     font-weight:bold;
-    font-size: 25px;
+    font-size: 22px;
 }
 .diet-kcal {
-    color: #757575 !important;
-    font-size: 20px;
+    color: var(--subtext) !important;
+    font-size: 18px;
     font-weight:bolder;
 }
 

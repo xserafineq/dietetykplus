@@ -1,7 +1,3 @@
-:root {
-    --form-bg-color: #4ccf66;
-}
-
 .signup-form {
     margin-top: 100px !important;
     background-color: #fafafa;
@@ -18,7 +14,7 @@
 
 .form-name {
     display: flex;
-    background-color: var(--form-bg-color);
+    background-color: var(--primary);
     padding: 10px;
     width: 100%;
     margin-bottom: 20px;
@@ -33,7 +29,7 @@
 
 .signup-button {
     margin-top: 25px;
-    background-color: var(--form-bg-color);
+    background-color: var(--primary);
     border: 0;
     padding: 10px;
     width: 100%;

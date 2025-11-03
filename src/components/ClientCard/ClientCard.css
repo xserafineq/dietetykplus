@@ -5,18 +5,35 @@
     width: 100%;
     height: auto;
     padding: 20px;
-    background: var(--form-bg-color);
+    background: var(--primary);
     font-size: 30px;
     font-weight: 650;
     border-radius: 25px;
+    margin-bottom: 30px;
+    transition: 0.5s ease-in-out;
 }
 
 .client-name {
     margin-right: 20px;
 }
 
-.show-btn {
-    fill: var(--form-bg-color) !important;
-    color: var(--form-bg-color) !important;
+.edit-btn, .show-btn {
+    background: white;
+    height: 60px;
+    width: 60px;
+    padding: 12px;
+    border-radius: 50%;
+    fill: var(--primary) !important;
+    color: var(--primary) !important;
     font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.edit-btn:hover, .show-btn:hover {
+    scale: 1.1;
+    fill: green !important;
+    color: var(--primary) !important;
+    transition: 0.5s ease-in-out;
 }

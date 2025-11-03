@@ -13,7 +13,7 @@
 
 .form-name {
     display: flex;
-    background-color: var(--form-bg-color);
+    background-color: var(--primary);
     padding: 10px;
     width: 100%;
     margin-bottom: 20px;
@@ -28,7 +28,7 @@
 
 .signin-button {
     margin-top: 25px;
-    background-color: var(--form-bg-color) !important;
+    background-color: var(--primary) !important;
     border: 0;
     padding: 10px;
     width: 100%;

@@ -11,7 +11,7 @@ const Calendar = FaCalendarAlt as React.ComponentType<any>;
 const Diet = MdFastfood as React.ComponentType<any>;
 const Visit = FaNotesMedical as React.ComponentType<any>;
 
-export default function Menu() {
+export default function Menu({name} : { name: string }) {
     const [data, setData] = useState<string>(new Date().toLocaleDateString("pl-PL") + " " + new Date().toLocaleTimeString("pl-PL"));
 
     const navigate = useNavigate();
@@ -31,6 +31,9 @@ export default function Menu() {
     const goToDiets = () => {
         navigate('diets');
     }
+    const goToVisits = () => {
+        navigate('visits');
+    }
 
 
     useEffect(() => {
@@ -42,7 +45,7 @@ export default function Menu() {
     return (
       <>
           <div className="time">
-              Witaj, {data}
+              Witaj {name}, {data}
           </div>
           <div className="activity-sections-container d-flex min-vh-100 justify-content-center align-items-start">
               <section className="d-flex flex-wrap justify-content-center gap-5 activity-sections">
@@ -58,7 +61,7 @@ export default function Menu() {
                       <Diet className={"option-icon"}/>
                       <div className={"option-name"}>Diety</div>
                   </div>
-                  <div className="activity-button">
+                  <div onClick={goToVisits} className="activity-button">
                       <Visit className={"option-icon"}/>
                       <div className={"option-name"}>Wizyty</div>
                   </div>

@@ -1,0 +1,24 @@
+.calendar-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-calendar {
+    width: 1000px !important;
+    background-color: #f8f9fa !important;
+    border: 3px solid var(--primary) !important;
+    border-radius: 25px !important;
+    padding: 25px !important;
+    color: #000000 !important;
+}
+
+.custom-calendar *{
+    color:black;
+    font-size: 22px !important;
+}

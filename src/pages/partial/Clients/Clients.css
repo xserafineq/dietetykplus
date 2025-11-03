@@ -5,7 +5,6 @@
     margin-right: auto;
     width: 80%;
     justify-content: center;
-    gap: 25px;
 }
 
 .client-search {
@@ -18,14 +17,16 @@
 
 .client-search input {
     background-color: blueviolet;
-    width: 75%;
+    width: 80%;
     background: white;
     border: 0;
     height: 40px;
-    padding-left: 2%;
+    padding:30px;
     text-align: center;
+    opacity: 0.8;
+    font-size: 22px;
     border-radius: 25px !important;
-    box-shadow: 0px 0px 30px -24px var(--form-bg-color) !important;
+    box-shadow: 0px 0px 30px -24px var(--primary) !important;
     margin-top: 30px;
-    border: 2px solid var(--form-bg-color);
+    border: 2px solid var(--primary);
 }

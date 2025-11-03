@@ -1,5 +1,8 @@
 :root {
-    --form-bg-color: #31c668;
+    --primary: #4cd35e;
+    --focus: #2890d5;
+    --text: #5a5a5a;
+    --subtext: #757575;
 }
 
 body {

@@ -6,7 +6,7 @@ export default function Calendar() {
     return (
         <>
         <div className={"calendar-container"}>
-            <CCalendar locale={"pl-PL"} className={"calendar"}/>
+            <CCalendar  locale={"pl-PL"} className={"custom-calendar"}/>
         </div>
         </>
     )

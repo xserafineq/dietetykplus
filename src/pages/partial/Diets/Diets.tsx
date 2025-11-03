@@ -1,5 +1,5 @@
 import './Diets.css';
-import DietCard from "../../components/DietCard/DietCard";
+import DietCard from "../../../components/DietCard/DietCard";
 import { TbMeat } from "react-icons/tb";
 import {FaFish} from "react-icons/fa";
 import { GiBroccoli } from "react-icons/gi";
@@ -11,7 +11,7 @@ const VegetarianIcon = GiBroccoli as React.ComponentType<any>;
 const Vege = GiJellyBeans as React.ComponentType<any>;
 
 
-export function Diets() {
+export default function Diets() {
 
     return (
         <>

@@ -1,0 +1,38 @@
+.visit-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    background: var(--primary);
+    padding: 20px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    transition: scale 0.5s;
+}
+
+.visit-box:hover {
+    scale: 1.03;
+    transition: scale 0.5s;
+}
+
+.visit-icon {
+    margin-right: 10px;
+    font-size: 55px;
+}
+
+.visit-clientData {
+    font-size: 35px !important;
+}
+
+.visit-date {
+    font-size: 25px !important;
+    margin-left: 15px;
+    font-weight: bolder;
+    padding-top: 5px;
+}
+
+.visit-now {
+    background: var(--focus) !important;
+}

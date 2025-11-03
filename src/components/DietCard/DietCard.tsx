@@ -9,7 +9,7 @@ export default function DietCard({icon, name, kcal} : {icon: ReactNode, name : s
             <div className={"diet-box"}>
                 <div className={"diet-icon"}>{icon}</div>
                 <div className={"diet-name"}>{name}</div>
-                <div className={"diet-kcal"}><FireIcon/> {kcal}</div>
+                <div className={"diet-kcal"}><FireIcon/> {kcal} kcal</div>
             </div>
         </>
     );
