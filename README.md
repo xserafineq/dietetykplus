@@ -1,6 +1,6 @@
 # 🥦 Dietetyk+
 
-## 🎯 Dietetyk+ to kompleksowy system do zarządzania pacjentami w salonach dietetycznych.
+### 🎯 Dietetyk+ to kompleksowy system do zarządzania pacjentami w salonach dietetycznych.
 Ułatwia pracę dietetyków poprzez zarządzanie wizytami, planami diet i monitorowanie postępów pacjentów.
 
 ### ✨ Funkcje
