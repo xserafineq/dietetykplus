@@ -1,5 +1,5 @@
-#Dietetyk+
+# Dietetyk+
 
-##Aplikacja webowa stworzona do prostego
+## Aplikacja webowa stworzona do prostego
 zarządzania pacjentami w salonie dietetycznym.
 
