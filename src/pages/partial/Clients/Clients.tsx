@@ -1,6 +1,12 @@
 import ClientCard from "../../../components/ClientCard/ClientCard";
 import './Clients.css'
+import {Outlet, useNavigate} from "react-router-dom";
 export default function Clients() {
+
+    const nagivate = useNavigate();
+
+    const goToClientPanel = () => { nagivate("client-info")};
+
     return (
         <>
             <div className={"clients-list"}>

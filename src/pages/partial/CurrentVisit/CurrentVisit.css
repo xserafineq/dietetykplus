@@ -1,0 +1,8 @@
+.container {
+    margin-bottom: 100px;
+}
+
+.panel-data table tr:hover {
+    scale: 1.05;
+    transition: scale 0.9s;
+}

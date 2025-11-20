@@ -1,0 +1,129 @@
+.panels-container {
+    margin-top: 80px !important;
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.panel-heading {
+    display: flex;
+    background-color: var(--primary);
+    width: 90%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 30px 30px 0px 0px;
+    padding-top: 10px;
+    gap: 5px;
+}
+
+.panel-pesel {
+    padding: 10px;
+    font-size: 22px;
+}
+
+.panel-box {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.panel-data {
+    width: 90%;
+    height: auto;
+    background-color: #f3f3f3;
+    color: black !important;
+    fill: black !important;
+}
+
+.panel-data table {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    color: var(--text) !important;
+}
+
+.panel-data table tr {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+.panel-data  table th {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.panel-data table td {
+    flex-wrap: wrap;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.panel-data table tr:nth-child(odd) {
+    background-color: var(--primary);
+}
+.panel-data table tr:nth-child(even) {
+    background-color: var(--focus);
+}
+
+.panel-data table tr:last-child {
+    border-radius: 0 0 30px 30px;
+}
+
+.panel-person-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: black !important;
+    font-size: 30px !important;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    gap: 5px;
+}
+
+.panel-person-info .name {
+    font-size: 50px !important;
+}
+
+.panel-person-info .item {
+    display: flex;
+    font-size: 25px;
+    height: 40px !important;
+    font-weight: bolder !important;
+}
+
+.panel-person-info .item svg {
+    font-size: 32px !important;
+    margin-right: 5px;
+    padding-top: 5px;
+}
+
+
+.panel-data svg {
+    font-size: 180px !important;
+    fill: white !important;
+    color: white !important;
+    margin-bottom: 30px;
+}

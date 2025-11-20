@@ -1,8 +1,8 @@
 :root {
     --primary: #4cd35e;
-    --focus: #2890d5;
+    --focus: #4ab155;
     --text: #5a5a5a;
-    --subtext: #757575;
+    --subtext: rgba(117, 117, 117, 0.85);
 }
 
 body {
