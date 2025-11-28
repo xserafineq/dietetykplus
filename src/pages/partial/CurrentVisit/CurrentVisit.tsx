@@ -10,6 +10,7 @@ import MeasurementModal from "../../../components/Modals/MeasurementModal/Measur
 import React from "react";
 import DietsModal from "../../../components/Modals/DietsModal/DietsModal";
 import NoteModal from "../../../components/Modals/NoteModal/NoteModal";
+import CloseVisitModal from "../../../components/Modals/CloseVisitModal/CloseVisitModal";
 
 const Diet = MdFastfood as React.ComponentType<any>;
 const PenIcon = FaPenToSquare as React.ComponentType<any>;
@@ -20,6 +21,7 @@ export default function CurrentVisit() {
     const [modalShow, setModalShow] = React.useState(false);
     const [show, setShow] = React.useState(false);
     const [noteShow, noteSetShow] = React.useState(false);
+    const [closeShow, closeSetShow] = React.useState(false);
 
     const navigate = useNavigate();
 
@@ -43,7 +45,7 @@ export default function CurrentVisit() {
                     <PenIcon/>
                     <div className={"option-name"}>Notatka</div>
                 </div>
-                <div onClick={goToVisits} className="activity-button close-btn">
+                <div onClick={() => closeSetShow(true)} className="activity-button close-btn">
                     <CloseIcon/>
                     <div className={"option-name"}>Zakończ wizytę</div>
                 </div>
@@ -52,6 +54,7 @@ export default function CurrentVisit() {
                               onHide={() => setModalShow(false)}/>
             <DietsModal show={show} setShow={setShow}/>
             <NoteModal show={noteShow} onHide={() => noteSetShow(false)}/>
+            <CloseVisitModal goTo={goToVisits} show={closeShow} setShow={closeSetShow}/>
         </>
     )
 }

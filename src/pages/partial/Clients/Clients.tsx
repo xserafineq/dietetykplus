@@ -1,4 +1,4 @@
-import ClientCard from "../../../components/ClientCard/ClientCard";
+import ClientCard from "../../../components/Cards/ClientCard/ClientCard";
 import './Clients.css'
 import {Outlet, useNavigate} from "react-router-dom";
 export default function Clients() {

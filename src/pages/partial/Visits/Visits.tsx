@@ -1,5 +1,5 @@
 import './Visits.css';
-import VisitCard from "../../../components/VisitCard/VisitCard";
+import VisitCard from "../../../components/Cards/VisitCard/VisitCard";
 import {Navigate,useNavigate} from "react-router-dom";
 
 export default function Visits() {

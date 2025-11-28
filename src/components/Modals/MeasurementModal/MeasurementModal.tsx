@@ -24,6 +24,7 @@ export default function MeasurementModal({show, onHide} : {show: boolean, onHide
                     <Form.Control type="number" placeholder="cukier [mg/dl]"/>
                 </Modal.Body>
                 <Modal.Footer>
+                    <Button variant={"secondary"} onClick={onHide}>Anuluj</Button>
                     <Button variant={"primary"} onClick={onHide}>Zapisz</Button>
                 </Modal.Footer>
             </Modal>

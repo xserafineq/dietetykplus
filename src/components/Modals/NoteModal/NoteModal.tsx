@@ -22,6 +22,7 @@ export default function NoteModal({show, onHide} : {show: boolean, onHide: () =>
                     <Form.Control className={"note-input"} as={"textarea"} placeholder="Zawartość notatki"/>
                 </Modal.Body>
                 <Modal.Footer>
+                    <Button variant={"secondary"} onClick={onHide}>Anuluj</Button>
                     <Button variant={"primary"} onClick={onHide}>Zapisz</Button>
                 </Modal.Footer>
             </Modal>
