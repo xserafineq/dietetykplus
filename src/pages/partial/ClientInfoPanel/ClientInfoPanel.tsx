@@ -1,6 +1,5 @@
 import './ClientInfoPanel.css';
 import {FaHistory} from "react-icons/fa";
-import {BsFilePersonFill} from "react-icons/bs";
 import {IoMdHome} from "react-icons/io";
 import {FaPenToSquare, FaPhone} from "react-icons/fa6";
 import {IoIosMail} from "react-icons/io";
@@ -18,6 +17,7 @@ const PhoneIcon = FaPhone as React.ComponentType<any>;
 const MailIcon = IoIosMail as React.ComponentType<any>;
 const WeightIcon = GiWeight as React.ComponentType<any>;
 const PenIcon = FaPenToSquare as React.ComponentType<any>;
+
 
 export default function ClientInfoPanel() {
     return (

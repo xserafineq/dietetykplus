@@ -3,7 +3,26 @@
     --focus: #4ab155;
     --text: #5a5a5a;
     --subtext: rgba(117, 117, 117, 0.85);
+    --primary-gradient: linear-gradient(0deg,var(--primary) 0%, var(--focus) 94%);
 }
+
+/*:root {*/
+/*    --primary: rgba(217, 37, 202, 1);*/
+/*    --focus: rgba(181, 29, 168, 1);*/
+/*    --text: #5a5a5a;*/
+/*    --subtext: rgba(117, 117, 117, 0.85);*/
+/*    --primary-gradient: linear-gradient(0deg,var(--primary) 0%, var(--focus) 94%);*/
+/*}*/
+
+
+/*:root {*/
+/*    --primary: rgba(227, 162, 50, 1);*/
+/*    --focus: #E36A32;*/
+/*    --text: #5a5a5a;*/
+/*    --subtext: rgba(117, 117, 117, 0.85);*/
+/*    --primary-gradient: linear-gradient(0deg,var(--primary) 0%, var(--focus) 94%);*/
+/*}*/
+
 
 body {
     margin: 0;
@@ -17,3 +36,22 @@ body {
     color: whitesmoke;
 }
 
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--primary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--focus);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

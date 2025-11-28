@@ -48,8 +48,8 @@
 .panel-data table {
     display: flex;
     flex-direction: column;
-    height: auto;
-    overflow-y:scroll;
+    max-height: 300px;
+    overflow-y: scroll;
     overflow-x: hidden;
     color: var(--text) !important;
 }
@@ -60,13 +60,15 @@
     width: 100%;
     padding: 20px;
 }
-.panel-data  table th {
+
+.panel-data table th {
     width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
 }
+
 .panel-data table td {
     flex-wrap: wrap;
     width: 33%;
@@ -79,13 +81,14 @@
 .panel-data table tr:nth-child(odd) {
     background-color: var(--primary);
 }
+
 .panel-data table tr:nth-child(even) {
     background-color: var(--focus);
 }
 
-.panel-data table tr:last-child {
-    border-radius: 0 0 30px 30px;
-}
+/*.panel-data table tr:last-child {*/
+/*    border-radius: 0 0 30px 30px;*/
+/*}*/
 
 .panel-person-info {
     width: 100%;
@@ -119,7 +122,6 @@
     margin-right: 5px;
     padding-top: 5px;
 }
-
 
 .panel-data svg {
     font-size: 180px !important;

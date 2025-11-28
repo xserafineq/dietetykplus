@@ -7,18 +7,25 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    color: white !important;
 }
 
 .custom-calendar {
-    width: 1000px !important;
-    background-color: #f8f9fa !important;
+    background: var(--primary-gradient);
     border: 3px solid var(--primary) !important;
     border-radius: 25px !important;
-    padding: 25px !important;
+    padding: 30px !important;
     color: #000000 !important;
 }
 
-.custom-calendar *{
-    color:black;
-    font-size: 22px !important;
+.custom-calendar table {
+    width: 450px !important;
 }
+
+.custom-calendar *{
+    color: #ffffff;
+    font-weight: 700 !important;
+    font-size: 22px !important;
+    text-shadow: 0px 0px 10px var(--focus);
+}
+

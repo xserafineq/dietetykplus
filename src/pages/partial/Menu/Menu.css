@@ -27,8 +27,8 @@
 
 .activity-button svg {
     fill: var(--primary) !important;
+    color: var(--primary) !important;
     font-size: 70px;
-    /*background-color: var(--primary) !important;*/
 }
 
 .activity-button .option-name {

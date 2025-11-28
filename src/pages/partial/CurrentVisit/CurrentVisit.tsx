@@ -6,9 +6,10 @@ import {MdFastfood} from "react-icons/md";
 import { FaPenToSquare } from "react-icons/fa6";
 import { RiCloseCircleLine } from "react-icons/ri";
 import {Navigate, useNavigate} from 'react-router-dom';
-import MeasurementModal from "../../../components/MeasurementModal/MeasurementModal";
+import MeasurementModal from "../../../components/Modals/MeasurementModal/MeasurementModal";
 import React from "react";
-import DietsModal from "../../../components/DietsModal/DietsModal";
+import DietsModal from "../../../components/Modals/DietsModal/DietsModal";
+import NoteModal from "../../../components/Modals/NoteModal/NoteModal";
 
 const Diet = MdFastfood as React.ComponentType<any>;
 const PenIcon = FaPenToSquare as React.ComponentType<any>;
@@ -18,6 +19,7 @@ const CloseIcon = RiCloseCircleLine as React.ComponentType<any>;
 export default function CurrentVisit() {
     const [modalShow, setModalShow] = React.useState(false);
     const [show, setShow] = React.useState(false);
+    const [noteShow, noteSetShow] = React.useState(false);
 
     const navigate = useNavigate();
 
@@ -37,7 +39,7 @@ export default function CurrentVisit() {
                     <Diet/>
                     <div className={"option-name"}>Przypisz Dietę</div>
                 </div>
-                <div className="activity-button">
+                <div onClick={() => noteSetShow(true)} className="activity-button">
                     <PenIcon/>
                     <div className={"option-name"}>Notatka</div>
                 </div>
@@ -49,6 +51,7 @@ export default function CurrentVisit() {
             <MeasurementModal show={modalShow}
                               onHide={() => setModalShow(false)}/>
             <DietsModal show={show} setShow={setShow}/>
+            <NoteModal show={noteShow} onHide={() => noteSetShow(false)}/>
         </>
     )
 }

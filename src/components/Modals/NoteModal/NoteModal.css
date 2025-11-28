@@ -1,0 +1,7 @@
+.note-input {
+    height: 200px;
+    /* USUŃ display:flex; */
+    /* USUŃ justify-content, align-items itd */
+    text-align: left;
+    padding: 10px; /* opcjonalnie */
+}

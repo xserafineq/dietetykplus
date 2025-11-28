@@ -1,4 +1,4 @@
-import Diets from "../../pages/partial/Diets/Diets";
+import Diets from "../../../pages/partial/Diets/Diets";
 import Modal from "react-bootstrap/Modal";
 import './DietsModal.css';
 

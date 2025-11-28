@@ -1,0 +1,35 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    bottom: -120px;
+    width: 100%;
+    margin-top: 100px;
+    font-weight: bolder;
+    background: var(--primary-gradient);
+    padding: 15px 50px 15px 50px;
+}
+
+.copyright  {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    text-align: left;
+    gap: 5px;
+}
+
+.copyright div svg {
+    padding-bottom: 5px;
+    font-size: 30px;
+}
+
+.theme-mode-container {
+    font-size: 25px;
+    height: auto;
+}
+
+.theme-mode-container svg {
+    font-size: 35px;
+    height: auto;
+}
