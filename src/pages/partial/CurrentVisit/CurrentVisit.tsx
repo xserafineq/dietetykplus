@@ -33,19 +33,19 @@ export default function CurrentVisit() {
         <>
             <ClientInfoPanel/>
             <section className="d-flex flex-wrap justify-content-center align-items-center text-center gap-5 container">
-                <div onClick={() => setModalShow(true)} className="activity-button">
+                <div onClick={() => setModalShow(true)} className="activity-button addMeasurement">
                     <WeightIcon/>
                     <div className={"option-name"}>Dodaj Pomiar</div>
                 </div>
-                <div onClick={() => setShow(true)} className="activity-button">
+                <div onClick={() => setShow(true)} className="activity-button setDiet">
                     <Diet/>
                     <div className={"option-name"}>Przypisz Dietę</div>
                 </div>
-                <div onClick={() => noteSetShow(true)} className="activity-button">
+                <div onClick={() => noteSetShow(true)} className="activity-button addNote">
                     <PenIcon/>
                     <div className={"option-name"}>Notatka</div>
                 </div>
-                <div onClick={() => closeSetShow(true)} className="activity-button close-btn">
+                <div onClick={() => closeSetShow(true)} className="activity-button closeVisit">
                     <CloseIcon/>
                     <div className={"option-name"}>Zakończ wizytę</div>
                 </div>

@@ -10,6 +10,7 @@
     color: white !important;
 }
 
+
 .custom-calendar {
     background: var(--primary-gradient);
     border: 3px solid var(--primary) !important;
@@ -17,6 +18,11 @@
     padding: 30px !important;
     color: #000000 !important;
 }
+
+.calendar-nav-btn {
+    color: #ffffff !important;
+}
+
 
 .custom-calendar table {
     width: 450px !important;

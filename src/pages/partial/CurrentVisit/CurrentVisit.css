@@ -6,3 +6,19 @@
     scale: 1.05;
     transition: scale 0.9s;
 }
+
+.addMeasurement svg{
+    fill: cornflowerblue;
+}
+
+.setDiet svg {
+    fill: var(--primary);
+}
+
+.addNote svg {
+    fill: #f49645;
+}
+
+.closeVisit svg {
+    fill: #e62b2b;
+}

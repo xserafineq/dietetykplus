@@ -51,19 +51,19 @@ export default function Menu({name} : { name: string }) {
           </div>
           <div className="activity-sections-container d-flex min-vh-100 justify-content-center align-items-start">
               <section className="d-flex flex-wrap justify-content-center gap-5 activity-sections">
-                  <div onClick={goToClients} className="activity-button">
+                  <div onClick={goToClients} className="activity-button clients">
                       <Persons/>
                       <div className={"option-name"}>Klienci</div>
                   </div>
-                  <div onClick={goToCalendar} className="activity-button">
+                  <div onClick={goToCalendar} className="activity-button calendar">
                       <Calendar/>
                       <div className={"option-name"}>Kalendarz</div>
                   </div>
-                  <div onClick={goToDiets} className="activity-button">
+                  <div onClick={goToDiets} className="activity-button diets">
                       <Diet/>
                       <div className={"option-name"}>Diety</div>
                   </div>
-                  <div onClick={goToVisits} className="activity-button">
+                  <div onClick={goToVisits} className="activity-button visits">
                       <Visit/>
                       <div className={"option-name"}>Wizyty</div>
                   </div>

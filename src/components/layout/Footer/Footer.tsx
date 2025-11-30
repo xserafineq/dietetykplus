@@ -10,8 +10,12 @@ export default function Footer() {
             <footer>
                 <div className={"copyright"}>
                     <div><AppleIcon/>Dietetyk+</div>
-                    <div>CopyRight {new Date().getFullYear()}</div>
-                    <div>Mateusz Serafin</div>
+                    <div className={"text"}>CopyRight {new Date().getFullYear()}</div>
+                    <div className={"text"}>
+                        <a href={"https://github.com/xserafineq"}>
+                            Mateusz Serafin
+                        </a>
+                        </div>
                 </div>
                 <div className={"theme-mode-container"}>
                     <ColorModeIcon/>

@@ -26,10 +26,26 @@
 }
 
 .activity-button svg {
-    fill: var(--primary) !important;
-    color: var(--primary) !important;
     font-size: 70px;
 }
+
+.clients svg {
+    fill: #4dcaef !important;
+}
+
+.calendar svg {
+    fill: #fac753 !important;
+}
+
+.diets svg {
+    fill: var(--primary-gradient) !important;
+}
+
+.visits svg {
+    fill: #cd3131 !important;
+}
+
+
 
 .activity-button .option-name {
     color: var(--subtext) !important;

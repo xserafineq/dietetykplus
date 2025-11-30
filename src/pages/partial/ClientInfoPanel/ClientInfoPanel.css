@@ -47,6 +47,7 @@
 
 .panel-data table {
     display: flex;
+    background-color: var(--primary);
     flex-direction: column;
     max-height: 300px;
     overflow-y: scroll;
@@ -78,13 +79,16 @@
     font-weight: bolder;
 }
 
-.panel-data table tr:nth-child(odd) {
-    background-color: var(--primary);
+.panel-data table tr:nth-child(odd):first-child {
+    background-color: var(--primary) !important;
 }
 
-.panel-data table tr:nth-child(even) {
+.panel-data table tr:nth-child(odd) {
     background-color: var(--focus);
 }
+
+
+
 
 /*.panel-data table tr:last-child {*/
 /*    border-radius: 0 0 30px 30px;*/

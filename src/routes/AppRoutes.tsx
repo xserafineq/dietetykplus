@@ -8,31 +8,31 @@ import Calendar from "../pages/partial/Calendar/Calendar";
 import SignUp from "../components/Forms/SignUp/SignUp";
 import Diets from "../pages/partial/Diets/Diets";
 import Visits from "../pages/partial/Visits/Visits";
-import {Key} from "node:readline";
 import ClientInfoPanel from "../pages/partial/ClientInfoPanel/ClientInfoPanel";
 import CurrentVisit from "../pages/partial/CurrentVisit/CurrentVisit";
 import Measurements from "../pages/partial/Measurements/Measurements";
+import Intro from "../pages/Intro/Intro";
 
 
 export const AppRoutes = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login/>}/>
-                <Route path="/login" element={<Login/>}/>
-                <Route path="/signup" element={<SignUp/>}/>
-                <Route path="/home" element={<Home/>}>
-                    <Route path="" element={<Menu name={"Mateusz"}/>}/>
-                    <Route path="menu" element={<Menu name={"Mateusz"}/>}/>
-                    <Route path="clients" element={<Clients/>}/>
-                    <Route path="client-info" element={<ClientInfoPanel/>}/>
-                    <Route path="calendar" element={<Calendar/>}/>
-                    <Route path="diets" element={<Diets/>}/>
-                    <Route path="visits" element={<Visits/>}/>
-                    <Route path="current-visit" element={<CurrentVisit/>}></Route>
-                    <Route path="measurements" element={<Measurements/>}/>
-                </Route>
-                <Route path="*" element={<Navigate to="/" replace/>}/>
+                {/*<Route path="/" element={<Intro/>}/>*/}
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/signup" element={<SignUp/>}/>
+                    <Route path="/home" element={<Home/>}>
+                        <Route path="" element={<Menu name={"Mateusz"}/>}/>
+                        <Route path="menu" element={<Menu name={"Mateusz"}/>}/>
+                        <Route path="clients" element={<Clients/>}/>
+                        <Route path="client-info" element={<ClientInfoPanel/>}/>
+                        <Route path="calendar" element={<Calendar/>}/>
+                        <Route path="diets" element={<Diets/>}/>
+                        <Route path="visits" element={<Visits/>}/>
+                        <Route path="current-visit" element={<CurrentVisit/>}></Route>
+                        <Route path="measurements" element={<Measurements/>}/>
+                    </Route>
+                <Route path="*" element={<Navigate to="login" replace/>}/>
             </Routes>
         </BrowserRouter>
     );
