@@ -18,11 +18,9 @@ export default function DietsModal({show, setShow}: { show: boolean, setShow: (s
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body className={"diets-modal-body"}>
-                    <p>
                         <div className={"diets-box"}>
                             <Diets></Diets>
                         </div>
-                    </p>
                 </Modal.Body>
             </Modal>
         </>

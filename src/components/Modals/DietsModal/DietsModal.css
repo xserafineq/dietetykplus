@@ -11,6 +11,16 @@
     height: 500px;
 }
 
-.diets-box .diet-box {
-    margin: 25px;
+.diets-modal-body .diets-container {
+    margin-top: 0 !important;
+}
+
+.diets-modal-body {
+    height: 500px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.diets-modal-body .diets-box .diet-box {
+    scale: 0.9;
 }
