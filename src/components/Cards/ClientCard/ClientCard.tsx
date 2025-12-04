@@ -8,7 +8,7 @@ export default function ClientCard({ name,lastname,pesel, city }: { name: string
         <>
             <div className={"client-card"}>
                 <div className={"client-name"}>
-                    {name} {lastname} / {pesel} / {city}
+                    {name} {lastname}, {pesel}
                 </div>
                 <div className={"buttons"}>
                     <Infoicon className={"show-btn"}/>

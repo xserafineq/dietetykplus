@@ -1,5 +1,5 @@
 import Modal from "react-bootstrap/Modal";
-import {Button} from "react-bootstrap";
+import {Alert, Button} from "react-bootstrap";
 import './CloseVisitModal.css';
 
 export default function CloseVisitModal({show, setShow, goTo} : { show: boolean, setShow: (show: boolean) => void , goTo: () => void}) {
@@ -9,7 +9,7 @@ export default function CloseVisitModal({show, setShow, goTo} : { show: boolean,
                 <Modal.Header closeButton>
                     <Modal.Title><b>Zakończ wizytę</b></Modal.Title>
                 </Modal.Header>
-                <Modal.Body className={"modal-body"}><b>Po zakończeniu wizyty, nie będzie można do niej wrócić !</b></Modal.Body>
+                <Modal.Body className={"modal-body"}><b><Alert variant={"danger"}>Po zakończeniu wizyty nie będzie można do niej powrócić !</Alert></b></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShow(false)}>
                         Anuluj

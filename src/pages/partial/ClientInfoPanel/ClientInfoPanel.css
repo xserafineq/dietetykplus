@@ -1,3 +1,129 @@
+/*.panels-container {*/
+/*    margin-top: 80px !important;*/
+/*    display: flex;*/
+/*    width: 80%;*/
+/*    height: auto;*/
+/*    margin: auto;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*.panel-heading {*/
+/*    display: flex;*/
+/*    background-color: var(--primary);*/
+/*    width: 90%;*/
+/*    height: 60px;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    font-size: 30px;*/
+/*    font-weight: bolder;*/
+/*    border-radius: 30px 30px 0px 0px;*/
+/*    padding-top: 10px;*/
+/*    gap: 5px;*/
+/*}*/
+
+/*.panel-pesel {*/
+/*    padding: 10px;*/
+/*    font-size: 22px;*/
+/*}*/
+
+/*.panel-box {*/
+/*    flex-direction: column;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    margin-bottom: 40px;*/
+/*}*/
+
+/*.panel-data {*/
+/*    width: 90%;*/
+/*    height: auto;*/
+/*    background-color: #f3f3f3;*/
+/*    color: black !important;*/
+/*    fill: black !important;*/
+/*}*/
+
+/*.panel-data table {*/
+/*    display: flex;*/
+/*    background-color: var(--primary);*/
+/*    flex-direction: column;*/
+/*    max-height: 300px;*/
+/*    overflow-y: scroll;*/
+/*    overflow-x: hidden;*/
+/*    color: var(--text) !important;*/
+/*}*/
+
+/*.panel-data table tr {*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    width: 100%;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*.panel-data table th {*/
+/*    width: 33%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    font-size: 25px;*/
+/*}*/
+
+/*.panel-data table td {*/
+/*    flex-wrap: wrap;*/
+/*    width: 33%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    font-size: 20px;*/
+/*    font-weight: bolder;*/
+/*}*/
+
+/*.panel-data table tr:nth-child(odd):first-child {*/
+/*    background-color: var(--primary) !important;*/
+/*}*/
+
+/*.panel-data table tr:nth-child(odd) {*/
+/*    background-color: var(--focus);*/
+/*}*/
+
+/*.panel-person-info {*/
+/*    height: auto;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    flex-wrap: wrap;*/
+/*    background-color: var(--primary);*/
+/*    color: black !important;*/
+/*    font-size: 20px !important;*/
+/*    padding: 20px;*/
+/*    border-radius: 25px;*/
+/*    gap: 5px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.panel-person-info .name {*/
+/*    font-size: 32px !important;*/
+/*}*/
+
+/*.panel-person-info .item{*/
+/*    font-size: 18px !important;*/
+/*    font-weight: bold;*/
+/*    !*background-color: red !important;*!*/
+/*    margin-top: 10px;*/
+/*}*/
+
+/*.item * {*/
+/*    margin:5px;*/
+/*}*/
+
+/*.panel-person-info .item svg{*/
+/*    !*background-color: red !important;*!*/
+/*    font-size: 35px !important;*/
+/*    padding-bottom: 5px;*/
+/*}*/
+
+
+
 .panels-container {
     margin-top: 80px !important;
     display: flex;
@@ -10,21 +136,21 @@
 
 .panel-heading {
     display: flex;
-    background-color: var(--primary);
-    width: 90%;
-    height: 60px;
+    background: var(--primary-gradient);
+    width: 100%;
+    height: 80px;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     font-weight: bolder;
     border-radius: 30px 30px 0px 0px;
-    padding-top: 10px;
     gap: 5px;
+    color: white;
 }
 
-.panel-pesel {
-    padding: 10px;
-    font-size: 22px;
+.panel-heading svg {
+    margin-right: 5px;
+    fill: white;
 }
 
 .panel-box {
@@ -35,24 +161,27 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+    border-radius: 30px 30px 50px 50px;
+    box-shadow: 0px 0px 24px -16px rgb(89, 89, 89);
 }
 
 .panel-data {
-    width: 90%;
+    width: 100%;
     height: auto;
     background-color: #f3f3f3;
     color: black !important;
     fill: black !important;
+    border-radius: 0px 0px 30px 30px;
 }
 
 .panel-data table {
     display: flex;
-    background-color: var(--primary);
+    background-color: white;
     flex-direction: column;
     max-height: 300px;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
-    color: var(--text) !important;
+    border-radius: 0px 0px 30px 30px;
 }
 
 .panel-data table tr {
@@ -60,7 +189,14 @@
     justify-content: space-around;
     width: 100%;
     padding: 20px;
+    /*border-bottom: 2px solid var(--primary);*/
 }
+
+
+.panel-data table tr:nth-child(even) *{
+    color: var(--focus) !important;
+}
+
 
 .panel-data table th {
     width: 33%;
@@ -68,6 +204,7 @@
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    color: var(--primary) !important;
 }
 
 .panel-data table td {
@@ -77,59 +214,40 @@
     justify-content: center;
     font-size: 20px;
     font-weight: bolder;
+    color: var(--primary) !important;
 }
-
-.panel-data table tr:nth-child(odd):first-child {
-    background-color: var(--primary) !important;
-}
-
-.panel-data table tr:nth-child(odd) {
-    background-color: var(--focus);
-}
-
-
-
-
-/*.panel-data table tr:last-child {*/
-/*    border-radius: 0 0 30px 30px;*/
-/*}*/
 
 .panel-person-info {
-    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary);
+    flex-wrap: wrap;
+    background: var(--primary-gradient);
     color: black !important;
-    font-size: 30px !important;
+    font-size: 20px !important;
     padding: 20px;
     border-radius: 25px;
-    text-align: center;
     gap: 5px;
+    text-align: center;
 }
 
 .panel-person-info .name {
-    font-size: 50px !important;
-}
-
-.panel-person-info .item {
-    display: flex;
-    font-size: 25px;
-    height: 40px !important;
-    font-weight: bolder !important;
-}
-
-.panel-person-info .item svg {
     font-size: 32px !important;
-    margin-right: 5px;
-    padding-top: 5px;
 }
 
-.panel-data svg {
-    font-size: 180px !important;
-    fill: white !important;
-    color: white !important;
-    margin-bottom: 30px;
+.panel-person-info .item{
+    font-size: 18px !important;
+    font-weight: bold;
+    /*background-color: red !important;*/
+    margin-top: 10px;
+}
+
+.item * {
+    margin:5px;
+}
+
+.panel-person-info .item svg{
+    /*background-color: red !important;*/
+    font-size: 35px !important;
+    padding-bottom: 5px;
 }

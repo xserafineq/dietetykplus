@@ -2,11 +2,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
-    bottom: -120px;
+    bottom: 0;
     width: 100%;
-    margin-top: 100px;
     font-weight: bolder;
+    margin-top: 100px;
     background: var(--primary-gradient);
     padding: 15px 50px 15px 50px;
 }

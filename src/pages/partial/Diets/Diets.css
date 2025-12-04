@@ -10,3 +10,7 @@
     height: auto;
     padding: 10px;
 }
+.add-btn svg{
+    color: white !important;
+    fill: white;
+}

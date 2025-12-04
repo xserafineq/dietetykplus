@@ -21,11 +21,11 @@
 
 .calendar-nav-btn {
     color: #ffffff !important;
+    text-transform: uppercase !important;
 }
 
-
 .custom-calendar table {
-    width: 450px !important;
+    width: 400px !important;
 }
 
 .custom-calendar *{

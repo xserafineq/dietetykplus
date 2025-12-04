@@ -8,7 +8,9 @@ export function Home() {
     return (
         <>
             <Header/>
+            <div className="home">
             <Outlet/>
+            </div>
             <Footer/>
         </>
     );

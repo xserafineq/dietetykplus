@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: Roboto;
 }
+
 .time {
     display: flex;
     text-align: center;
