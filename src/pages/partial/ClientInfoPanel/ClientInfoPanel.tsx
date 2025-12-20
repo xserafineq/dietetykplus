@@ -6,8 +6,8 @@ import {IoIosMail} from "react-icons/io";
 import {MdOutlineNumbers} from "react-icons/md";
 import {FaBirthdayCake} from "react-icons/fa";
 import {GiWeight} from "react-icons/gi";
-import React from "react";
-import {Home} from "../../Home/Home";
+import React, {useEffect, useState} from "react";
+import { useParams } from 'react-router-dom';
 
 
 const AgeIcon = FaBirthdayCake as React.ComponentType<any>;
@@ -21,6 +21,51 @@ const PenIcon = FaPenToSquare as React.ComponentType<any>;
 
 
 export default function ClientInfoPanel() {
+
+    type Customer = {
+        pesel: string;
+        firstName: string;
+        lastName: string;
+        age: number;
+        residentialAddress: string;
+        email: string;
+        visits: [];
+    }
+
+    type Employee = {
+        employeeId: number;
+        firstName: string;
+    }
+
+    type Visit = {
+        visitId: number;
+        date: string;
+        employeeId: number;
+    }
+
+    const { pesel } = useParams<{ pesel: string }>();
+
+    const [customer, setCustomer] = useState<Customer>();
+    const [employees, setEmployees] = useState<Employee[]>([]);
+
+    useEffect(() => {
+        async function getCustomer() {
+            const response = await fetch(`https://localhost:7081/api/Customers/${pesel}`);
+            const json = await response.json();
+            setCustomer(json);
+        }
+        getCustomer();
+
+
+        async function getEmployee() {
+            const response = await fetch(`https://localhost:7081/api/Employees`);
+            const json = await response.json();
+            setEmployees(json);
+        }
+        getEmployee();
+
+    }, [pesel]);
+    console.log('PESEL z URL:', pesel);
     return (
         <>
             <div className={"panels-container"}>
@@ -28,17 +73,18 @@ export default function ClientInfoPanel() {
                     <div className={"panel-data"}>
                         <div className={"panel-person-info"}>
                             <div className={"name"}>
-                                <b>Mateusz Serafin, 19 lat</b>
+                                <b>{customer?.firstName} {customer?.lastName}, {customer?.age} lat/a</b>
                             </div>
                             <div className={"item"}>
-                                <PeselIcon/>0424241111  <HomeIcon/>39-400 Tarnobrzeg Ul. Orląt Lwowskich 5
+                                <PeselIcon/>{customer?.pesel}  <HomeIcon/>{customer?.residentialAddress}
                             </div>
                             <div className={"item"}>
-                                <PhoneIcon/>519 739 297  <MailIcon/>serafin24@gmail.com
+                                <PhoneIcon/>519 739 297  <MailIcon/>{customer?.email}
                             </div>
                         </div>
                     </div>
                 </div>
+                {customer?.visits.length as number > 0 ?
                 <div className={"panel-box visits-history"}>
                     <div className={"panel-heading"}>
                         <HistoryIcon/>Historia Wizyt
@@ -50,34 +96,22 @@ export default function ClientInfoPanel() {
                                 <th>Data</th>
                                 <th>Dietetyk</th>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>22.05.2010</td>
-                                <td>Mateusz</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>22.05.2010</td>
-                                <td>Mateusz</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>22.05.2010</td>
-                                <td>Mateusz</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>22.05.2010</td>
-                                <td>Mateusz</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>22.05.2010</td>
-                                <td>Mateusz</td>
-                            </tr>
+                            {customer?.visits?.map((visit : Visit) => (
+                                <tr key={visit?.visitId}>
+                                    <td>{visit?.visitId}</td>
+                                    <td>{visit?.date.substring(0,10)}</td>
+                                    <td>{employees.map((e:Employee) => (
+                                        e.employeeId === visit.employeeId ? e.firstName : ""
+                                    ))
+                                    }
+                                    </td>
+                                </tr>
+                            ))}
+
                         </table>
                     </div>
-                </div>
+                </div> : ""
+                }
                 <div className={"panel-box measurements-history"}>
                     <div className={"panel-heading"}>
                         <WeightIcon/>Historia Pomiarów

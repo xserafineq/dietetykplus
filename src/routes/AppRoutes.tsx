@@ -11,8 +11,6 @@ import Visits from "../pages/partial/Visits/Visits";
 import ClientInfoPanel from "../pages/partial/ClientInfoPanel/ClientInfoPanel";
 import CurrentVisit from "../pages/partial/CurrentVisit/CurrentVisit";
 import Measurements from "../pages/partial/Measurements/Measurements";
-import Intro from "../pages/Intro/Intro";
-
 
 export const AppRoutes = () => {
     return (
@@ -25,7 +23,7 @@ export const AppRoutes = () => {
                         <Route path="" element={<Menu name={"Mateusz"}/>}/>
                         <Route path="menu" element={<Menu name={"Mateusz"}/>}/>
                         <Route path="clients" element={<Clients/>}/>
-                        <Route path="client-info" element={<ClientInfoPanel/>}/>
+                        <Route path="clients/:pesel" element={<ClientInfoPanel/>}/>
                         <Route path="calendar" element={<Calendar/>}/>
                         <Route path="diets" element={<Diets/>}/>
                         <Route path="visits" element={<Visits/>}/>

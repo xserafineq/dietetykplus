@@ -5,12 +5,12 @@ import { GiWeight } from "react-icons/gi";
 import {MdFastfood} from "react-icons/md";
 import { FaPenToSquare } from "react-icons/fa6";
 import { RiCloseCircleLine } from "react-icons/ri";
-import {Navigate, useNavigate} from 'react-router-dom';
 import MeasurementModal from "../../../components/Modals/MeasurementModal/MeasurementModal";
 import React from "react";
 import DietsModal from "../../../components/Modals/DietsModal/DietsModal";
 import NoteModal from "../../../components/Modals/NoteModal/NoteModal";
 import CloseVisitModal from "../../../components/Modals/CloseVisitModal/CloseVisitModal";
+import {useNavigate} from "react-router-dom";
 
 const Diet = MdFastfood as React.ComponentType<any>;
 const PenIcon = FaPenToSquare as React.ComponentType<any>;
