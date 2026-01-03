@@ -7,6 +7,9 @@
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/src/components/Modals/Diets" />
+      <excludeFolder url="file://$MODULE_DIR$/src/components/Modals/Measurements" />
+      <excludeFolder url="file://$MODULE_DIR$/src/components/Modals/Clients" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

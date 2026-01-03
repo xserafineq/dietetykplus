@@ -43,20 +43,21 @@
     width: 80%;
     height: auto;
     background: white;
-    padding: 20px;
     padding-bottom: 30px !important;
     border-radius: 25px;
     transition: scale 0.5s;
     box-shadow: 0px 0px 24px -16px rgb(89, 89, 89);
     margin-bottom: 20px;
-    margin-top:20px;
+    margin-top: 20px;
+    padding: 25px;
+    cursor: pointer;
 }
 
 .visit-now {
     background: var(--primary-gradient);
 }
 
-.visit-now *{
+.visit-now * {
     color: white !important;
     fill: white !important;
 }
@@ -70,11 +71,12 @@
     transition: scale 0.5s;
 }
 
-.visit-icon svg{
+.visit-icon svg {
     margin-right: 15px;
     font-size: 60px;
     color: var(--primary) !important;
     fill: var(--primary) !important;
+    padding: 5px;
 }
 
 .visit-clientData {
@@ -84,8 +86,20 @@
 }
 
 .visit-date {
-    margin-left: 15px;
+    font-size: 25px;
     font-weight: bolder;
-    font-size: 20px;
     color: var(--primary) !important;
+}
+
+.visit-date svg {
+    font-size: 25px !important;
+    color: var(--primary) !important;
+    fill: var(--primary) !important;
+    padding-bottom: 2px;
+}
+
+.visit-icon svg{
+    color: var(--primary) !important;
+    fill: var(--primary) !important;
+    padding: 5px;
 }

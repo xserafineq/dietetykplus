@@ -14,3 +14,4 @@ export default function DietCard({icon, name, kcal} : {icon: ReactNode, name : s
         </>
     );
 }
+

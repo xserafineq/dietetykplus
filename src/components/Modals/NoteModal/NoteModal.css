@@ -5,3 +5,25 @@
     text-align: left;
     padding: 10px; /* opcjonalnie */
 }
+
+.items-diet-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    height: 250px;
+}
+
+.item-diet {
+    width: auto;
+    display: flex;
+    scale: 0.8;
+}
+
+.item-diet .diet-box:hover {
+    background-color: var(--primary);
+    transition: 1s ease-in-out;
+}
+

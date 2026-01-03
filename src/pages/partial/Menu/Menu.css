@@ -45,6 +45,9 @@
     fill: #cd3131 !important;
 }
 
+.admin svg {
+    fill: #e85309 !important;
+}
 
 
 .activity-button .option-name {
@@ -52,4 +55,8 @@
     font-size: 22px;
     font-weight: bolder;
     padding-top: 15px;
+}
+
+.activity-button:hover {
+    cursor: pointer;
 }

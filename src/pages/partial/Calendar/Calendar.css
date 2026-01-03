@@ -1,37 +1,53 @@
-.calendar-container {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: auto;
-    margin-left: auto;
-    margin-right: auto;
+.rbc-calendar {
+    border-radius: 25px !important;
+}
+
+.rbc-calendar *{
+    color: var(--text) !important;
+}
+
+.rbc-toolbar {
+    background-color: var(--primary) !important;
+}
+
+.rbc-toolbar-label {
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.rbc-btn-group *{
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.rbc-btn-group *:hover{
+    background-color: var(--focus) !important;
+}
+
+.rbc-active {
+    background-color: var(--focus) !important;
+}
+
+.rbc-header {
+    background-color: var(--primary) !important;
+}
+.rbc-header *{
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.rbc-event {
+    color: white !important;
+}
+.rbc-event *{
     color: white !important;
 }
 
+/* Calendar.css */
 
-.custom-calendar {
-    background: var(--primary-gradient);
-    border: 3px solid var(--primary) !important;
-    border-radius: 25px !important;
-    padding: 30px !important;
-    color: #000000 !important;
+/* 1. Ukrywa całkowicie irytującą sekcję All Day na górze */
+.rbc-time-header-content .rbc-row.rbc-time-header-cell,
+.rbc-allday-cell,
+.rbc-time-header-content > .rbc-row:first-child {
+    display: none !important;
 }
-
-.calendar-nav-btn {
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-}
-
-.custom-calendar table {
-    width: 400px !important;
-}
-
-.custom-calendar *{
-    color: #ffffff;
-    font-weight: 700 !important;
-    font-size: 22px !important;
-    text-shadow: 0px 0px 10px var(--focus);
-}
-

@@ -11,8 +11,17 @@ header {
     font-size: 25px;
     font-weight: bold;
 }
+#logo {
+    display: flex;
+    width: 98%;
+}
 
-a {
-    color: white;
-    text-decoration: none !important;
+#logout svg {
+    font-size: 35px !important;
+    margin-left: 15px;
+}
+
+#home svg {
+    font-size: 35px !important;
+    margin-left: 15px;
 }

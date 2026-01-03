@@ -2,7 +2,13 @@ import './AddClientModal.css';
 import Modal from "react-bootstrap/Modal";
 import {Form} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import FieldModal from "../../FailedModal/FailedModal";
+import {useState} from "react";
+import axios from "axios";
 export default function AddClientModal({show, onHide} : {show: boolean, onHide: () => void}) {
+    const [fieldModal,setFieldModal] = useState(false);
+    const [message,setMessage] = useState("");
+
     type Customer = {
         pesel: string;
         firstName: string;
@@ -10,21 +16,20 @@ export default function AddClientModal({show, onHide} : {show: boolean, onHide: 
         age: number;
         email: string;
         residentialAddress: string;
+        phone: string;
     }
 
-    async function addEmployee(c: Customer) {
+    async function addCustomer(c: Customer) {
         try {
-            const response = await fetch(`https://localhost:7081/api/Customers`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(c)
-            });
-            return response.json();
-        } catch (error) {
-            console.error('Błąd dodawania klienta:', error);
-            throw error;
+            const response = await axios.post("https://localhost:7081/api/Customers", c);
+            return response.data;
+        } catch (error: any) {
+            if (error.response) {
+                setMessage(error.response.data);
+            } else {
+                setMessage(error.message);
+            }
+            setFieldModal(true);
         }
     }
 
@@ -48,6 +53,7 @@ export default function AddClientModal({show, onHide} : {show: boolean, onHide: 
                     <Form.Control id={"pesel"} type="text" placeholder="Pesel"/>
                     <Form.Control id={"age"} type="number" placeholder="Wiek"/>
                     <Form.Control id={"email"} type="text" placeholder="Adres email"/>
+                    <Form.Control id={"phone"} type="text" placeholder="Numer telefonu (np. +48 111 111 11)"/>
                     <Form.Control id={"address"} type="text" placeholder="Adres zamieszkania"/>
                 </Modal.Body>
                 <Modal.Footer>
@@ -59,14 +65,15 @@ export default function AddClientModal({show, onHide} : {show: boolean, onHide: 
                             lastName: (document.getElementById("lastname") as HTMLInputElement).value,
                             age: (document.getElementById("age") as HTMLInputElement).value as unknown as number,
                             email: (document.getElementById("email") as HTMLInputElement).value,
-                            residentialAddress: (document.getElementById("address") as HTMLInputElement).value
+                            residentialAddress: (document.getElementById("address") as HTMLInputElement).value,
+                            phone: (document.getElementById("phone") as HTMLInputElement).value.replace(/ /g, '')
                         };
-                        addEmployee(customer);
+                        addCustomer(customer);
                         onHide()
                     }}>Zapisz</Button>
                 </Modal.Footer>
             </Modal>
-
+            <FieldModal setShow={setFieldModal} show={fieldModal} message={message}/>
         </>
     )
 }
