@@ -24,15 +24,13 @@ export default function AddClientModal({show, onHide} : {show: boolean, onHide: 
             const response = await axios.post("https://localhost:7081/api/Customers", c);
             return response.data;
         } catch (error: any) {
-            if (error.response) {
-                setMessage(error.response.data);
-            } else {
-                setMessage(error.message);
-            }
+            const errorData = error.response?.data;
+            const finalMessage = errorData?.title || errorData || "Wystąpił błąd";
+
+            setMessage(finalMessage);
             setFieldModal(true);
         }
     }
-
 
     return (
         <>
@@ -48,13 +46,13 @@ export default function AddClientModal({show, onHide} : {show: boolean, onHide: 
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form.Control id={"firstname"} type="text" placeholder="Imię"/>
-                    <Form.Control id={"lastname"} type="text" placeholder="Nazwisko"/>
-                    <Form.Control id={"pesel"} type="text" placeholder="Pesel"/>
-                    <Form.Control id={"age"} type="number" placeholder="Wiek"/>
-                    <Form.Control id={"email"} type="text" placeholder="Adres email"/>
-                    <Form.Control id={"phone"} type="text" placeholder="Numer telefonu (np. +48 111 111 11)"/>
-                    <Form.Control id={"address"} type="text" placeholder="Adres zamieszkania"/>
+                    <Form.Control required={true} id={"firstname"} type="text" placeholder="Imię"/>
+                    <Form.Control required={true} id={"lastname"} type="text" placeholder="Nazwisko"/>
+                    <Form.Control required={true} id={"pesel"} type="text" placeholder="Pesel"/>
+                    <Form.Control required={true} id={"age"} type="number" placeholder="Wiek"/>
+                    <Form.Control required={true} id={"email"} type="email" placeholder="Adres email"/>
+                    <Form.Control required={true} id={"phone"} type="text" placeholder="Numer telefonu (np. +48 111 111 11)"/>
+                    <Form.Control required={true} id={"address"} type="text" placeholder="Adres zamieszkania"/>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant={"secondary"} onClick={onHide}>Anuluj</Button>

@@ -1,0 +1,20 @@
+.employee-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    font-weight: bolder;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 0px 24px -16px rgb(89, 89, 89);
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.employee-name {
+    margin-right: 20px;
+    color: var(--primary);
+}

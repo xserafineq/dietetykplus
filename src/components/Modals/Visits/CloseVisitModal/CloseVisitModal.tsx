@@ -38,7 +38,7 @@ export default function CloseVisitModal({show, setShow,  closeVisitId} : { show:
                         Anuluj
                     </Button>
                     <Button onClickCapture={()=>{
-                        closeVisit(closeVisitId,"noactive");
+                        closeVisit(closeVisitId,"closed");
                         navigate("../visits");
                     }} variant="primary" onClick={() => setShow(false)}>
                         Zakończ

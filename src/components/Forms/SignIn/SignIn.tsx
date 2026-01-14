@@ -30,9 +30,6 @@ export default function SignIn() {
             }
         }
     };
-
-
-
     const navigate = useNavigate();
     const goToHome = () => {
         navigate('/home');
@@ -49,10 +46,10 @@ export default function SignIn() {
                     label="Email"
                     className="mb-3"
                 >
-                    <Form.Control value={email} onChange={(e)=>{setEmail(e.target.value)}} type="email" placeholder="name@example.com"/>
+                    <Form.Control value={email} onChange={(e)=>{setEmail(e.target.value)}} type="email" required={true} placeholder="name@example.com"/>
                 </FloatingLabel>
                 <FloatingLabel controlId="floatingPassword" label="Hasło">
-                    <Form.Control value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Password"/>
+                    <Form.Control value={password} onChange={(e)=>{setPassword(e.target.value)}} required={true} type="password" placeholder="Password"/>
                 </FloatingLabel>
                 <Button className="signin-button" variant={"success"} type={"submit"}>Zaloguj się</Button>
             </form>

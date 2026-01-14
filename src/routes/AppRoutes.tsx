@@ -10,14 +10,13 @@ import Calendar from "../pages/partial/Calendar/Calendar";
 import Diets from "../pages/partial/Diets/Diets";
 import Visits from "../pages/partial/Visits/Visits";
 import CurrentVisit from "../pages/partial/CurrentVisit/CurrentVisit";
-import Measurements from "../pages/partial/Measurements/Measurements";
+import AdminPanel from "../pages/partial/AdminPanel/AdminPanel";
 
 export const AppRoutes = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/login" element={<Login />} />
-                {/*<Route path="/signup" element={<SignUp />} />*/}
                 <Route element={<ProtectedRoute />}>
                     <Route path="/home" element={<Home />}>
                         <Route index element={<Menu/>} />
@@ -28,11 +27,9 @@ export const AppRoutes = () => {
                         <Route path="diets" element={<Diets />} />
                         <Route path="visits" element={<Visits />} />
                         <Route path="visits/:pesel/:visit" element={<CurrentVisit />} />
-                        <Route path="measurements" element={<Measurements />} />
+                        <Route path={"admin"} element={<AdminPanel/>}></Route>
                     </Route>
                 </Route>
-
-                {/* fallback */}
                 <Route path="*" element={<Navigate to="/login" replace />} />
             </Routes>
         </BrowserRouter>

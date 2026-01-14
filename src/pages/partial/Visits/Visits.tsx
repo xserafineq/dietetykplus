@@ -1,9 +1,8 @@
 import './Visits.css';
 import VisitCard from "../../../components/Cards/VisitCard/VisitCard";
-import {createElement, useEffect, useState} from "react";
 import {jwtDecode} from "jwt-decode";
-import {motion} from "framer-motion";
 import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 export default function Visits() {
 
@@ -63,10 +62,8 @@ export default function Visits() {
     }, [employee]);
 
 
-
     let navigate = useNavigate();
-
-    let [visitCount,setVisitCount] = useState(0);
+    let [visitCount] = useState(0);
     return (
         <>
             <div className={"visits-container"}>
@@ -75,13 +72,18 @@ export default function Visits() {
                 </div>
                 {
                     visits?.map(visit => {
-                        if (visit?.status === "active") {
-                            return<VisitCard goTo={()=>{navigate(`../visits/${visit.customer.pesel}/${visit.visitId}`)}}
-                                             now={visitCount++ == 0 ? true : false}
-                                               clientData={new Array<string>(visit.customer.firstName, visit.customer.lastName)}
-                                               date={(new Date(visit.date).getUTCHours() + ":" + new Date(visit.date).getUTCMinutes()).toString()}/>
+                        if (visit?.status === "active" || visit?.status === "postponed") {
+                            return <VisitCard goTo={() => {
+                                navigate(`../visits/${visit.customer.pesel}/${visit.visitId}`)
+                            }}
+                                              now={visitCount++ == 0}
+                                              clientData={new Array<string>(visit.customer.firstName, visit.customer.lastName)}
+                                              date={new Date(visit.date).toLocaleTimeString('pl-PL', {
+                                                  hour: '2-digit',
+                                                  minute: '2-digit'
+                                              })}/>
 
-                    }
+                        }
                     })
                 }
             </div>

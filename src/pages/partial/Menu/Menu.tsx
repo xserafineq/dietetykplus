@@ -53,6 +53,9 @@ export default function Menu() {
     const goToVisits = () => {
         navigate('visits');
     }
+    const goToAdmin = () => {
+        navigate('admin');
+    }
 
     useEffect(() => {
         setData(new Date().toLocaleDateString("pl-PL"));
@@ -84,16 +87,12 @@ export default function Menu() {
                   </div>
                   {
                       employee?.isadmin === "1" ? (
-                          <div onClick={goToClients} className="activity-button admin">
+                          <div onClick={goToAdmin} className="activity-button admin">
                               <AdminPanel/>
                               <div className={"option-name"}>AdminPanel</div>
                           </div>
                       ) : ""
                   }
-
-
-
-
               </section>
           </div>
       </>

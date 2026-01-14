@@ -5,9 +5,10 @@ import {FaPenToSquare, FaPhone} from "react-icons/fa6";
 import {IoIosMail} from "react-icons/io";
 import {MdOutlineNumbers} from "react-icons/md";
 import {GiWeight} from "react-icons/gi";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import {useParams} from 'react-router-dom';
 import ShowMeasurementModal from '../../../components/Modals/Measurements/ShowMeasurementModal/ShowMeasurementModal'
+import BMIChart from "../../../components/Charts/BMICharts/BMICharts";
 
 const HistoryIcon = FaHistory as React.ComponentType<any>;
 const PeselIcon = MdOutlineNumbers as React.ComponentType<any>;
@@ -73,6 +74,7 @@ export default function ClientInfoPanel() {
     const [showModalMeasurement, setShowModalMeasurement] = useState(false);
     const [selectedMeasurement, setSelectedMeasurement] = useState<number | null>(null);
 
+
     useEffect(() => {
         async function getCustomer() {
             const response = await fetch(`https://localhost:7081/api/Customers/${pesel}`);
@@ -123,6 +125,28 @@ export default function ClientInfoPanel() {
         return foundDiet ? foundDiet.type + " " + foundDiet.kcalDeficit + " kcal" : "Nieznana dieta";
     }
 
+
+    const customerMeasurements = useMemo(() => {
+        if (!customer?.visits) return [];
+
+        return customer.visits
+            .map(visit => {
+                const visitResult = result.find(
+                    r => r.medicalResultId === visit.visitId
+                );
+                if (!visitResult) return null;
+
+                return {
+                    visitId: visit.visitId,
+                    date: visitResult.date.substring(0, 10),
+                    bmi: visitResult.bmi,
+                    employeeId: visit.employeeId
+                };
+            })
+            .filter(Boolean);
+    }, [customer, result]);
+
+
     return (
         <>
             <div className={"panels-container"}>
@@ -136,13 +160,11 @@ export default function ClientInfoPanel() {
                                 <PeselIcon/>{customer?.pesel} <HomeIcon/>{customer?.residentialAddress}
                             </div>
                             <div className={"item"}>
-                                <PhoneIcon/>{customer?.phone} <MailIcon/>{customer?.email}
+                                <PhoneIcon/>{customer?.phone.substring(0,3) + " " + customer?.phone.substring(3,customer?.phone.length)} <MailIcon/>{customer?.email}
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* Historia Wizyt - proste sprawdzenie */}
                 {customer && customer.visits && customer.visits.length > 0 ? (
                     <div className={"panel-box visits-history"}>
                         <div className={"panel-heading"}>
@@ -169,7 +191,6 @@ export default function ClientInfoPanel() {
                     </div>
                 ) : null}
 
-                {/* Historia Pomiarów */}
                 {checkResultsLength() > 0 ? (
                     <div className={"panel-box measurements-history"}>
                         <div className={"panel-heading"}>
@@ -183,30 +204,30 @@ export default function ClientInfoPanel() {
                                     <th>Data</th>
                                     <th>Dietetyk</th>
                                 </tr>
-                                {customer?.visits?.map(visit => {
-                                    const visitResult = result.find(r => r.medicalResultId === visit.visitId);
-                                    if (!visitResult) return null;
-                                    const employee = employees.find(e => e.employeeId === visit.employeeId);
+                                {customerMeasurements?.map((m) => {
+                                    const employee = employees.find(e => e.employeeId === m?.employeeId);
+
                                     return (
-                                        <tr onClick={() => {
-                                            setShowModalMeasurement(true)
-                                            setSelectedMeasurement(visit.visitId)
-                                        }} key={visit.visitId}>
-                                            <td>{visitResult.bmi}</td>
-                                            <td>{visitResult.date.substring(0, 10)}</td>
-                                            <td>{employee?.firstName || ""}</td>
+                                        <tr onClick={
+                                            ()=>{
+                                                setSelectedMeasurement(Number(m?.visitId))
+                                                setShowModalMeasurement(true)
+                                            }
+                                        } key={m?.visitId}>
+                                            <td>{m?.bmi}</td>
+                                            <td>{m?.date}</td>
+                                            <td>{employee?.firstName ?? ""}</td>
                                         </tr>
                                     );
                                 })}
                                 </tbody>
                             </table>
+                            <BMIChart data={customerMeasurements}/>
                         </div>
                     </div>
                 ) : null}
-
-                {/* Zalecenia */}
                 {customer?.visits?.some(visit => visit.recomendation) ? (
-                    <div className={"panel-box measurements-history"}>
+                    <div className={"panel-box recomendations"}>
                         <div className={"panel-heading"}>
                             <PenIcon/>Zalecenia
                         </div>
