@@ -5,15 +5,25 @@ Ułatwia pracę dietetyków poprzez zarządzanie wizytami, planami diet i monito
 
 ### ✨ Funkcje
 
-👥 CRUD pacjentów z notatkami medycznymi
+🗓️ System wizyt, rejestracji pacjenta
 
-📊 Wykresy postępów i kalkulator BMI
+🔎 Wygodna wyszukiwarka pacjentów oraz diet
 
-🗓️ System wizyt z powiadomieniami mailowymi
+💟 Sprawdzanie historii pacjenta (odbyte wizyty, wykonane pomiary medyczne, przypisane zalecenia)
 
-🍽️ Zarządzanie dietami i eksport planów do PDF
+📊 Wykres postępów (BMI)
 
-🔐 System logowania dla pracowników
+🍽️ Zarządzanie dietami, zaleceniami żywieniowymi w formie pliku PDF
+
+📨 Wysyłanie zaleceń żywieniowych automatycznie na mail pacjenta
+
+🗓️ Harmonogram wizyt z możliwością odwoływania wizyt oraz ich przeniesienia na inny termin
+
+🔐 System logowania pracowników, panel Administratora
+
 
 ### 🛠️ Technologie
 <p align="center"> <img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react" alt="React" /> <img src="https://img.shields.io/badge/.NET%20Core-6.0-512BD4?style=for-the-badge&logo=dotnet" alt=".NET Core" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" /> </p>
+
+
+#### API: [DietetykAPI](https://github.com/xserafineq/DietetykAPI)
