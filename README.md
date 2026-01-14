@@ -23,7 +23,7 @@ Ułatwia pracę dietetyków poprzez zarządzanie wizytami, planami diet i monito
 
 
 ### 🛠️ Technologie
-<p align="center"> <img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react" alt="React" /> <img src="https://img.shields.io/badge/.NET%20Core-6.0-512BD4?style=for-the-badge&logo=dotnet" alt=".NET Core" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" /> </p>
+REACT, TYPESCRIPT, C# APS .NET CORE, POSTGRESSQL
 
 
 #### API: [DietetykAPI](https://github.com/xserafineq/DietetykAPI)
