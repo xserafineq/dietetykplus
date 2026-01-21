@@ -25,5 +25,6 @@ Ułatwia pracę dietetyków poprzez zarządzanie wizytami, planami diet i monito
 
 #### 🔗 Linki
 * **Dokumentacja:** [Dokumentacja](https://github.com/xserafineq/dietetykplus/blob/master/public/Dokumentacja%20Dietetyk%2B.pdf)
+* **Opis Efektów:** [Opis Efektów](https://github.com/xserafineq/dietetykplus/blob/master/public/Mateusz%20Serafin%20Dietetyk%2B%20opis%20efektów%20na%20poszczególne%20oceny.pdf)
 * **Backend API:** [DietetykAPI](https://github.com/xserafineq/DietetykAPI)
 * **Schemat Bazy:** [schema.sql](https://github.com/xserafineq/DietetykAPI/blob/master/DietetykAPI/Database/schema.sql)
