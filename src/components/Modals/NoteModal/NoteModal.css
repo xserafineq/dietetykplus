@@ -27,3 +27,10 @@
     transition: 1s ease-in-out;
 }
 
+
+.item-diet-picked * {
+    background-color: var(--primary);
+    scale: 0.8;
+    fill: white !important;
+    color: white !important;
+}

@@ -14,7 +14,7 @@ import FieldModal from "../FailedModal/FailedModal";
 export default function NoteModal({show, onHide} : {show: boolean, onHide: () => void}) {
     const [fieldModal,setFieldModal] = useState(false);
     const [message, setMessage] = useState("");
-
+    const [isPicked, setIsPicked] = useState(false);
 
     type Diet = {
         dietId: number;
@@ -98,9 +98,16 @@ export default function NoteModal({show, onHide} : {show: boolean, onHide: () =>
 
                     <div className={"items-diet-container"}>
                         {
+
                             searchedDiets.map(diet =>{
+                                const isCurrentPicked = pickedDiet === diet.dietId;
                                 const Icon = dietIcons.get(diet.type);
-                                return (<div className={"item-diet"} onClick={()=>{setPickedDiet(diet?.dietId)}} key={diet?.dietId}>
+                                return (<div className={isCurrentPicked ? "item-diet-picked" : "item-diet"} onClick={(e)=>{
+                                    setPickedDiet(diet?.dietId)
+                                    setIsPicked(true)
+                                }
+
+                                } key={diet?.dietId}>
                                     <DietCard icon={Icon ? <Icon/> : null} name={diet.type} kcal={diet.kcalDeficit}/>
                                 </div>)
                             })
